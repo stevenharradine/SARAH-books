@@ -1,0 +1,21 @@
+article.chapter div, article.chapter p {
+	text-align: justify;
+}
+
+article.chapter div::selection, article.chapter p::selection {
+	background-color: red;
+	color: white;
+}
+
+.page-settings-panel {
+	position: fixed;
+	top: 70px;
+	right: 0;
+	padding: 10px;
+
+	font-size: 15px;
+	line-height: 1em;
+
+	background-color: black;
+	color: white;
+}
