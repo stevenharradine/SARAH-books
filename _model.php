@@ -132,8 +132,19 @@ EOD;
 	FROM
 		`sarah`.`books`
 EOD;
+
 			$data = mysql_query($sql) or die(mysql_error());
+			$books = Array ();
+
+			while (($row = mysql_fetch_array( $data )) != null) {
+				$books[] = Array (
+	        'id' => $row['BOOK_ID'],
+	        'author' => $row['author'],
+	        'title' => $row['title'],
+	        'epub' => $row['path']
+				);
+			}
 			
-			return $data;
+			return $books;
 		}
 	}
